@@ -3,7 +3,6 @@
 html {
     font-family: "et-book", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     background-color: #fffff8;
-    color: #0a2c0f;
     color: #122b17;
 
 }
@@ -22,6 +21,11 @@ h3,h4,h5,h6,h7{
 
 a{
     color: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    color:gray;
 }
 
 .container{
@@ -38,8 +42,22 @@ p{
     font-size: 1.4em;
 }
 
+.post-meta{
+    color: gray;
+    text-align: right;
+}
+
+.post-meta.centered{
+    clear:both;
+    text-align: center;
+    float: none;
+}
+
 
 code {
     font-family: Monaco, "Lucida console", 'Inconsolata', monospace;
 }
 
+.clear-both{
+    clear: both;
+}
