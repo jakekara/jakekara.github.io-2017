@@ -10,7 +10,13 @@ body {
     line-height: 1.4;
 }
 
-h1, h2{
+h1{
+    font-size: 3em;
+    font-weight: 400;
+    font-style: italic;
+}
+
+h2{
     font-size: 2.3em;
     font-weight: 400;
 }
@@ -20,12 +26,13 @@ h3,h4,h5,h6,h7{
 }
 
 a{
-    color: inherit;
+    /* color: inherit; */
+    color: #288753;
     text-decoration: none;
 }
 
 a:hover{
-    color:gray;
+    color:inherit;
 }
 
 .container{

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A basic plotting toolbox for d3"
+title:  "A plotting toolbox for D3"
 date:   2017-10-07 00:00:30 -0500
 categories: javascript
 ---
@@ -18,42 +18,45 @@ the tool set. For documentation and demo code, check out the repo._
 
 So, what I mean by not getting between you and D3 is that this tool set
 does not reimplement or abstract D3's powerful tools or notions. Instead,
-it glues together some of the discrete capabilities of D3 in order to
-simplify the process of basic chart building. Wherever this tool set
-creates an instance of a d3 object, such as d3.axisBottom, it exposes that
-object, so you can use this tool to create basic charts quickly, but then
-modify them in a way you're already familiar with.
+it glues together some of the discrete capabilities of D3 in a manner that
+you would most likely use them for basic chart building. Wherever this tool
+set creates an instance of a D3 object, such as D3.axisBottom, or even a D3
+selection, it exposes that object, so you can use this tool to bootstrap basic
+charts quickly, but then modify them as needed.
 
-Basic charts, sometimes called "daily" graphics in the news dev world,
-include bars, lines, scatter plots and maybe some other basic charts that
-get the job done most of the time. These are charts that non-technica news
-staff members can produce on their own, or they can be output from a Pandas
-or R analysis.
-
-This tool set combines D3 features in a way you would most likely want to
-use them when building daily graphics in "layers" from the ground up.
+Basic charts, which I'll generally call "daily graphics", include bars,
+lines, scatter plots and maybe some other basic charts that get the job
+done most of the time. These are charts that non-technical news staff
+members can produce on their own, or they can be output from a Pandas or R
+analysis.
 
 ### Why bother?
 
 You might ask why bother. There are other ready-made chart tools. I have
-tried many.
+tried many, but they tend to be highly opinionated and aren't meant to be
+fiddled with outside of their own APIs. I do not like spending my time
+learning APIs, such as how to make a vertical line label the Highcharts
+way, when I can just make a standard SVG _line_ element, and add it
+wherever I want.
 
-Highcharts is excellent, but it is too opinionated about
-styling.
+* Highcharts is excellent for getting charts built fast, but it is too
+opinionated about styling, and the API is too cumbersome.
+* [ggD3](https://benjh33.github.io/ggd3/) looks promising but it is no longer
+being actively developed.
 
-[ggD3](https://benjh33.github.io/ggd3/) looks promising but it is
-no longer being actively developed.
+So, I need a limited set of tools that has a _minimal API_, is
+_unopinionated_ about styling and which is still being actively
+developed. If you can find one, let me know and I'll happily abandon this
+project!
 
-Ultimately, I make a lot of custom graphics in d3. This tool set just makes
-the process of bootstrapping daily graphics, which I can then use as-is or
-customize to my heart's content. It just makes sense for my workflow.
+Okay, here's how it all works...
 
 ## The base layer: Plotter
 
 Ingredients:
 
 * An SVG element
-* Two d3 scales: One for X, one for Y
+* Two D3 scales: One for X, one for Y
 
 In order to put any data on an SVG you need to be able to map your data --
 dollars, population, car crashes -- to coordinates on the page.
@@ -62,15 +65,15 @@ You create a new plotter object by calling its constructor, and then
 calling methods to give it an SVG element on the DOM to draw in, and two
 scales, for X and Y.
 
-Any d3.scale will work -- d3.scaleLinear, d3.scaleTime. Since I'm not
-trying to recreate or abstract any d3 components. You must set the scale's
+Any D3.scale will work -- D3.scaleLinear, D3.scaleTime. Since I'm not
+trying to recreate or abstract any D3 components. You must set the scale's
 domain based on your min and max data values, but plotter takes care of the
 domain, which is based on the SVG dimensions. Since plotter remaps the
 domain each time it redraws, this tool set gives you responsive graphics
 _almost_ for free.
 
-__"Almost" free responsiveness:__  _Right now you have to call the
-draw method to redraw, but I will make that automatic._
+***On "Almost" free responsiveness:*** _Right now you have to call the
+   draw method to redraw, but I will make that automatic._ 
 
 ## Adding drawables 
 
@@ -104,7 +107,7 @@ Seriously, you don't need to supply any additional data or functionaliy to
 draw an axis. Since you've already created a plotter with an X and Y scale,
 the axes object needs only to be created and added to the plotter.
 
-Since it exposes the axis it creates, you can modify it using d3 or JS to
+Since it exposes the axis it creates, you can modify it using D3 or JS to
 your heart's content before you draw the entire visualization with the
 plotter's draw function.
 
