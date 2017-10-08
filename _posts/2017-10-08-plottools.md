@@ -13,86 +13,119 @@ I'm building a set of chart-making tools that don't get between you and D3.
 
 ## Not getting in the way
 
-So, what I mean by not getting between you and D3 is that these tools do
-not reimplement or abstract D3's powerful tools or notions. Instead, it
-glues together some of the discrete capabilities of D3 in order to simplify
-the process of basic chart building. Wherever this tool set creates an
-instance of a d3 object, such as d3.axisBottom, it exposes that object, so
-you can use this tool to create basic charts, and then modify them in a way
-you're already familiar with if you use D3.
+So, what I mean by not getting between you and D3 is that this tool set
+does not reimplement or abstract D3's powerful tools or notions. Instead,
+it glues together some of the discrete capabilities of D3 in order to
+simplify the process of basic chart building. Wherever this tool set
+creates an instance of a d3 object, such as d3.axisBottom, it exposes that
+object, so you can use this tool to create basic charts quickly, but then
+modify them in a way you're already familiar with.
 
 Basic charts, sometimes called "daily" graphics in the news dev world,
 include bars, lines, scatter plots and maybe some other basic charts that
-get the job done most of the time. These are charts that non-data staff
-members can produce on their own, or they can be output from a Pandas or R
-analysis.
+get the job done most of the time. These are charts that non-technica news
+staff members can produce on their own, or they can be output from a Pandas
+or R analysis.
 
 This tool set combines D3 features in a way you would most likely want to
 use them when building daily graphics in "layers" from the ground up.
 
-## The base layer, plotter, packages and SVG with X and Y scales
+## The base layer: Plotter
 
 Ingredients:
 
 * An SVG element
-* Two d3 axes: One for X, one for Y
+* Two d3 scales: One for X, one for Y
 
-All of the "daily graphics" I'm responsible for in the newsroom have an X
-and a Y dimension, so, the base object in the library, plotter, takes an
-SVG, an x scale and a y scale. Since I am not trying to abstract D3, you
-supply any d3 scale, such d3.scaleLinear or d3.scaleTime.
+In order to put any data on an SVG you need to be able to map your data --
+dollars, population, car crashes -- to coordinates on the page.
 
-You only need to set the scale's domain using d3's syntax. You do not need
-to add the range, as the plotter will map that to the SVG's dimensions each
-time its draw method is called.
+You create a new plotter object by calling its constructor, and then
+calling methods to give it an SVG element on the DOM to draw in, and two
+scales, for X and Y.
 
-Once you've created a plotter, you now have an SVG that you can map data
-inputs to positions.
+Any d3.scale will work -- d3.scaleLinear, d3.scaleTime. Since I'm not
+trying to recreate or abstract any d3 components. You must set the scale's
+domain based on your min and max data values, but plotter takes care of the
+domain, which is based on the SVG dimensions. Since plotter remaps the
+domain each time it redraws, this tool set gives you responsive graphics
+_almost_ for free.
+
+__"Almost" free responsiveness:__  _Right now you have to call the
+draw method to redraw, but I will make that automatic._
 
 ## Adding drawables 
 
 Once you have a plotter, you add any number of "drawables" -- objects that
-can draw themselves when tied to a plotter. I have implemented axes,
-scatter and line drawables. A bar drawable will be added next.
+can draw themselves when tied to a plotter. Calling the plotter's draw
+method iterates through the drawables in order that they were added
+(first-in-first-out) and calls their draw methods, so you can redraw at
+any time.
 
-### The axes drawable: No more margin geometry
+_I have implemented axes, scatter and line drawables. A bar drawable will
+be added next._ 
+
+The plotter stores some basic information and objects all of the drawables
+need access to, such as the SVG, and a dictionary of its margin
+dimensions. Drawables, such as the axes drawable, may mutate the margins to
+fit their various components. When that happens, they must call the
+plotter's draw function so all of the other drawables can redraw based on
+these updated settings.
+
+The process of adding a drawable to a plotter involves creating a new
+drawable by calling its constructor and adding the drawable with the
+plotter's addDrawable method. 
+
+### The axes drawable
 
 Ingredients:
 
-* Nothing
+* A plotter
 
-This drawable adds a left and bottom axis, based on the scale information
-provided to the plotter. All of the positioning to make the axes fit within
-the axes are handled internally. As needed, this drawable will modify the
-plotter's margins and redraw the SVG automatically, triggering all other
+Seriously, you don't need to supply any additional data or functionaliy to
+draw an axis. Since you've already created a plotter with an X and Y scale,
+the axes object needs only to be created and added to the plotter.
+
+Since it exposes the axis it creates, you can modify it using d3 or JS to
+your heart's content before you draw the entire visualization with the
+plotter's draw function.
+
+This drawable adds a left and bottom axis, based on the plotter's scale and
+SVG dimensions.
+
+_Note: I do not support top and right axes at this time, and that is the
+most opinionated piece of this code base so far._
+
+All of the positioning to make the axes fit within the SVG are
+handled internally. As needed, this drawable will modify the plotter's
+margins and redraw the visualization automatically, triggering all other
 drawables to be redrawn. Since all drawables can access the plotter's
 margins, they will be redrawn with the axes dimensions and position taken
 into account.
 
-The process of adding an axis drawable to a plotter is simply creating a
-new instance of one, and adding with the plotter's addDrawable
-method. Since you already passed an X and Y scale to the plotter, it has
-all the information it needs to render on the left and bottom of the plot.
-
-Most of my daily graphics also have axes, but you can skip this step if
-you're making a sparkline for instance.
-
-_Note that I do not support top and right axes at this time, and that is the
-most opinionated piece of this code base so far._
+Most of my daily graphics have axes, but you may well want to skip this
+step if you're making a sparkline for instance.
 
 ## Scatter, line drawables
 
 Ingredients:
 
+* A plotter
 * A data array
 * Two functions that return X and Y values from the array
 
 Adding a scatter or line drawable are identical processes. You provide some
-array of data, and a function that returns X values and a function that
+array of data and a function that returns X values and a function that
 returns Y values.
 
-## Status
+## Status and planned use
 
 Currently, this project is just in the form of several JavaScript files you
-can include with script tags. They are not bundled or minified yet.
+can include with script tags. They are not bundled or minified yet. I plan
+to add a few more features and then use this library to unify styles within
+a web-based in-house chart making tool, as well as for generating web
+charts with PANDAS.
 
+## Free as in freedom
+
+This entire thing is re-usable under GPL 3.
