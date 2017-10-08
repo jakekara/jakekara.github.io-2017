@@ -35,6 +35,14 @@ a:hover{
     color:inherit;
 }
 
+.post-list a{
+    color:inherit;
+}
+
+.post-list a:hover{
+    color: #288753;
+}
+
 .container{
 
     margin-top: 60pt;
