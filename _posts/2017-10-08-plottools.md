@@ -127,7 +127,7 @@ into account.
 Most of my daily graphics have axes, but you may well want to skip this
 step if you're making a sparkline for instance.
 
-## Scatter, line drawables
+### Scatter, line drawables
 
 Ingredients:
 
