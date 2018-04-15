@@ -7,7 +7,7 @@ categories: python
 
 An inexact clone of GNU shuf. Free, implemented in Python.
 
-[Here's the repo](https://github.com/jakekara/pyshuf)p
+[Here's the repo](https://github.com/jakekara/pyshuf)
 
 ### Install
 
