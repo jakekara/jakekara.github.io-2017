@@ -1,5 +1,5 @@
 ---
-layout: barehtml
+layout: post
 title: "contact"
 permalink: /contact/
 ---
