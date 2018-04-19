@@ -1,6 +1,6 @@
 ---
 layout: barehtml
-title: whoami
+title: whoami2
 permalink: /whoami2/
 ---
 
