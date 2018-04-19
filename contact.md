@@ -1,6 +1,6 @@
 ---
 layout: barehtml
-title: contacting me
+title: "contact"
 permalink: /contact/
 ---
 
