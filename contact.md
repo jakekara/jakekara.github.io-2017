@@ -4,8 +4,6 @@ title: "contact"
 permalink: /contact/
 ---
 
-I only accept secure messages.
-
 If you want to send me a secure, one-way encrypted message, go [to my
 keybase page](https://keybase.io/encrypt#jakekara), type your message and
 hit encrypt. Then email me that blob of digital gibberish. It will be
