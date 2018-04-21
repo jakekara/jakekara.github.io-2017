@@ -18,4 +18,3 @@ manage and share encryption keys, and send and receive encrypted messages.
 
 You can also message me on [Signal](https://signal.org/download/) if you
 have my phone number if you prefer messaging.
-
