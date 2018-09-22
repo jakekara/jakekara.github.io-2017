@@ -47,7 +47,7 @@ linkscraper.py and document_linkscraper.py, which contain the classes
 LinkScraper and DocumentLinkScraper respectively.
 
 The idea with this abstraction is that LinkScraper fetches and HTML
-document and  pulls out all of the links (the <a> tags). It has a
+document and  pulls out all of the links (the a tags). It has a
 filter_links method, but the default is to leave them all in.
 
 The DocumentLinkScraper subclasses LinkScraper and overrides the
