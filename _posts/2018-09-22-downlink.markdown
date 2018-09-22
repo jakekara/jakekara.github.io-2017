@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "downlink - Utility for downloading documents link from a web page."
+title:  "downlink: scrape documents linked from a web page"
 date:   2018-09-22 15:20:00 -0500
 categories: python
 ---
