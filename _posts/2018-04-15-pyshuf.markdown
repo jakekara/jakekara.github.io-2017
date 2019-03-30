@@ -13,7 +13,7 @@ An inexact clone of GNU shuf. Free, implemented in Python.
 
      $ pip install pyshuf
 
-or 
+or  
      $ easy_install pyshuf
 
 ### Usage
