@@ -28,7 +28,7 @@ h3,h4,h5,h6,h7{
 a{
     /* color: inherit; */
     color: #288753;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 a:hover{
@@ -48,7 +48,6 @@ a:hover{
     margin-top: 60pt;
     margin-right: auto;
     margin-left: auto;
-    width: 80%;
     max-width: 600pt;
     
 }
@@ -71,6 +70,9 @@ p{
 
 code {
     font-family: Monaco, "Lucida console", 'Inconsolata', monospace;
+    font-size: 10pt;
+    color: gray;
+
 }
 
 .clear-both{
