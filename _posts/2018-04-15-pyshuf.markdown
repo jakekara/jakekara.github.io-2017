@@ -11,9 +11,10 @@ An inexact clone of GNU shuf. Free, implemented in Python.
 
 ### Install
 
-pip install pyshuf
+     $ pip install pyshuf
 
-easy_install pyshuf
+or 
+     $ easy_install pyshuf
 
 ### Usage
 
@@ -50,7 +51,6 @@ Shuffle the first 10 words from the dictionary
 
 Use input from the command line
 
-     pyshuf: error: argument -e/--echo: ignored explicit argument 'cho'
      $ pyshuf --echo one two three four five
      four
      two
