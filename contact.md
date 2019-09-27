@@ -16,5 +16,7 @@ need your encryption key -- which you might not have yet. The easiest way
 [Mailvelope](https://www.mailvelope.com/en). This tool lets you create,
 manage and share encryption keys, and send and receive encrypted messages.
 
+If you don't have my email address, you can use [this form](https://docs.google.com/forms/d/1_yFYuIox8Cy-8Jxdub-SxDkeXoYFZcpTZnr8KRpmfp8/edit) to send me yours.
+
 You can also message me on [Signal](https://signal.org/download/) if you
 have my phone number if you prefer messaging.
