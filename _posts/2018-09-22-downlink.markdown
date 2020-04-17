@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "downlink: scrape documents linked from a web page"
+description: "Open source command-line tool for downloading all links from a web page"
 date:   2018-09-22 15:20:00 -0500
 categories: python
 ---

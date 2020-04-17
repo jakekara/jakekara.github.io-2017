@@ -25,6 +25,14 @@ h3,h4,h5,h6,h7{
     font-style: italic;
 }
 
+#site-title{
+    font-size: 1em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 0px;
+}
+
 a{
     /* color: inherit; */
     color: #288753;

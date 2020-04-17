@@ -1,22 +1,19 @@
 ---
 layout: base
+title: blog root
+description: Jake Kara's personal website
 ---
 {% include base.html %}
-<!-- <div class="home"> -->
-<!-- <h1 class="page-heading">JakeKara.com</h1> -->
 <div class="post-list">
   {% for post in site.posts %}
   <div class="col-xs-12 story-preview">
-      <div class="col-xs-7 col-sm-2 post-meta">
-	{{ post.date | date: "%B %-d, %Y" }}
-      </div>
+    <div class="col-xs-7 col-sm-2 post-meta">
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    </div>
     <a class="post-link meta" href="{{ post.url | prepend: site.baseurl }}">
-      <div class="col-xs-12 col-sm-8">
-	{{ post.excerpt }}
-      </div>
+      <article class="col-xs-12 col-sm-8">
+        {{ post.excerpt }}
+      </article>
     </a>
-    <!-- <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div> -->
-    <!-- <div class="post-excerpt">{{post.excerpt}}</div> -->
   </div>
   {% endfor %}
-<!-- </div> -->
