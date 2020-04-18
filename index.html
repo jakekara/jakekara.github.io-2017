@@ -10,7 +10,7 @@ description: Jake Kara's personal website
     <div class="col-xs-7 col-sm-2 post-meta">
       <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
     </div>
-    <a class="post-link meta" href="{{ post.url | prepend: site.baseurl }}">
+    <a class="post-link meta" href="{{ post.url | relative_url }}">
       <article class="col-xs-12 col-sm-8">
         {{ post.excerpt }}
       </article>

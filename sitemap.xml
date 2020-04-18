@@ -10,13 +10,13 @@ layout: null
     </url>
     {% for page in site.pages %}
     <url>
-        <loc>{{ page.url | prepend: site.baseurl }}</loc>
+        <loc>{{ page.url | absolute_url }}</loc>
         <changefreq>yearly</changefreq>
     </url>
     {% endfor %}
       {% for post in site.posts %}
     <url>
-        <loc>{{ post.url | prepend: site.baseurl }}</loc>
+        <loc>{{ post.url | absolute_url }}</loc>
         <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>yearly</changefreq>
     </url>
