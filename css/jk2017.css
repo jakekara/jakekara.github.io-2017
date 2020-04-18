@@ -9,8 +9,11 @@ html {
     background-color: #fffff8;
     color: #122b17;
 }
-a, a:hover {
+a {
     color: #288753;
+}
+a:hover{
+    color: gray;
 }
 
 /* Support dark and light mode */
@@ -56,13 +59,13 @@ h3,h4,h5,h6,h7{
 }
 
 
-a:hover{
+/* a:hover{
     color:inherit;
 }
 
 .post-list a{
     color:inherit;
-}
+} */
 
 .container{
 
