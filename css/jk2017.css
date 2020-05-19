@@ -102,6 +102,9 @@ code {
     font-family: Monaco, "Lucida console", 'Inconsolata', monospace;
     font-size: 10pt;
     color: gray;
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: scroll;
 
 }
 
