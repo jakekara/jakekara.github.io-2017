@@ -17,5 +17,5 @@ The [code](https://github.com/jakekara/big-todo/blob/master/btodo/__init__.py)
 is just one 47-line .py file. It makes use of an interesting package called
 (glob)[https://docs.python.org/3/library/glob.html], which handles recursively finding all of the TODO files with the following one-liner:
 
-<code><pre>glob(os.path.join(parent, f"**/{basename}"))</pre></code>
+<code>glob(os.path.join(parent, f"**/{basename}"))</code>
 
