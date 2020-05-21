@@ -29,15 +29,15 @@ include: [".well-known"]
 
 #permalink: /:categories/:year/:month/:day/:title:output_ext
 
-# plugins:
-#   - jekyll-archives
+plugins:
+  - jekyll-archives
 
-# jekyll-archives:
-#   enabled: []
-#   layout: index
-#   permalinks:
-#     year: '/:year/'
-#     month: '/:year/:month/'
-#     day: '/:year/:month/:day/'
-#     tag: '/tag/:name/'
-#     category: '/category/:name/'
+jekyll-archives:
+  enabled: all
+  layout: index
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
