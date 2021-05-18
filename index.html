@@ -4,16 +4,21 @@ title: blog root
 description: Jake Kara's personal website
 ---
 {% include base.html %}
-<div class="post-list">
+<ul class="post-list">
   {% for post in site.posts %}
-  <div class="col-xs-12 story-preview">
-    <div class="col-xs-7 col-sm-2 post-meta">
-      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-    </div>
-    <a class="post-link meta" href="{{ post.url | relative_url }}">
-      <article class="col-xs-12 col-sm-8">
-        {{ post.excerpt }}
+  <a aria-label="{{ post.title }} " href="{{ post.url | relative_url }}">
+  <li class="col-xs-12 story-preview">
+    
+      <article>
+        <header>
+          <p class="col-xs-7 col-sm-2 post-meta">
+            <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+          </p>
+          <p class="post-link meta" href="{{ post.url | relative_url }}">
+              {{ post.emoji | default: "📝" }} {{ post.excerpt | strip_html}}</p>
+        </header>
       </article>
-    </a>
-  </div>
+  </li>
+</a>
   {% endfor %}
+</ul>
