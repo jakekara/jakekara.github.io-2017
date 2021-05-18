@@ -3,6 +3,7 @@ layout: post
 title:  "Brute forcing URL shorteners"
 date:   2016-10-08 22:57:30 -0400
 categories: python
+emoji: 💪
 ---
 
 I experimented in brute-forcing URL shortening services.

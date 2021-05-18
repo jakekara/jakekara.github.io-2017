@@ -3,6 +3,7 @@ layout: post
 title:  "Ghostery doesn't like AWS Beanstalk"
 date:   2016-10-12 18:30:00 -0400
 categories: AWS
+emoji: 👻
 ---
 
 Ghostery blocks assets from crazy AWS beanstalk endpoints.

@@ -3,6 +3,7 @@ layout: post
 title:  "scrapetools.py - for pulling down all linked files from a page"
 date:   2017-01-27 4:22:30 -0500
 categories: python
+emoji: 🕸
 ---
 
 I wrote some Python functions to help download every file linked to on a web page.

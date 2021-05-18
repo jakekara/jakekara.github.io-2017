@@ -3,6 +3,7 @@ layout: post
 title:  "metalink-author-py"
 date:   2020-04-17 13:00:00 -0500
 categories: python
+emoji: 🗃
 ---
 
 I wrote a Python library for building files in the Metalink XML format.

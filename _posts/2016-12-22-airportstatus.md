@@ -3,6 +3,7 @@ layout: post
 title:  "Fetching FAA airport status in python"
 date:   2016-12-22 19:50:30 -0400
 categories: python
+emoji: 🛩
 ---
 
 I wrote some code to fetch airport status from the FAA's airport status

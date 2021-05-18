@@ -3,6 +3,7 @@ layout: post
 title:  "Visualizing foliage"
 date:   2016-10-03 19:57:30 -0400
 categories: javascript
+emoji: 🍁
 ---
 
 I made a thing to compare foliage in two locations over four years.

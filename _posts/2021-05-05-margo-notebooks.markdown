@@ -3,6 +3,7 @@ layout: post
 title: modular jupyter notebooks
 date: "2021-05-05 17:01:00 -0500"
 categories: margo
+emoji: 🐍
 ---
 
 I've been working on an effective way to use Jupyter Notebooks as Python modules.

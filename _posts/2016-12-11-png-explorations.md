@@ -3,6 +3,7 @@ layout: post
 title:  "Apple screenshot PNGs contain non-standard chunk"
 date:   2016-12-11 19:50:30 -0400
 categories: python
+emoji: 🧀
 ---
 
 I did some idle poking around in the PNG file format, and found something weird.

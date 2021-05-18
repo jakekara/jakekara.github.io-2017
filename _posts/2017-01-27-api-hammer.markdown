@@ -3,6 +3,7 @@ layout: post
 title:  "API keychain to bypass rate limits"
 date:   2017-01-24 4:14:30 -0500
 categories: python
+emoji: 🔨
 ---
 
 I wrote an API keychain to use multiple keys on the same API, getting around daily max-call rate limits.

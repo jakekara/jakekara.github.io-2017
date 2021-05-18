@@ -3,6 +3,7 @@ layout: post
 title: covid-date - CLI tool to get the covid-era date
 date: '2020-07-07 15:00:00 -0500'
 categories: python
+emoji: 📅
 ---
 
 I wrote a CLI tool to print the covid-era date.

@@ -3,6 +3,7 @@ layout: post
 title:  "A plotting toolbox for D3"
 date:   2017-10-07 00:00:30 -0500
 categories: javascript
+emoji: 📊
 ---
 
 I'm building a set of chart-making tools that don't get between you and D3.

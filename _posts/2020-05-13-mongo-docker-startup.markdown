@@ -3,6 +3,7 @@ layout: post
 title: Tripping up on Mongo Docker's use of ENTRYPOINT and CMD
 date: '2020-05-13 06:00:00 -0500'
 categories: docker
+emoji: 🐳
 ---
 
 When using the official Mongo Docker image, I ran into a problem that had me scratching my head for a while.

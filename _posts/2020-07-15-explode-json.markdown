@@ -3,6 +3,7 @@ layout: post
 title: explode-json — serializing JSON to a file structure
 date: '2020-07-15 10:00:00 -0500'
 categories: JSON
+emoji: 🧨
 ---
 
 I'm working on a tool to serialize JSON to a folder hierarchy.

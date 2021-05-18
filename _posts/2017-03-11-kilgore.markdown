@@ -3,6 +3,7 @@ layout: post
 title:  "Command-line CSV processing with Kilgore Trout"
 date:   2017-03-11 10:00:30 -0500
 categories: python
+emoji: 🐼
 ---
 
 Some csv cleanup scripts grew into a little utility named kilgore.

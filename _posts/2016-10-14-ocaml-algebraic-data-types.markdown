@@ -3,6 +3,7 @@ layout: post
 title:  "OCaml algebraic data types and pattern matching"
 date:   2016-10-14 18:30:00 -0400
 categories: ocaml cardstuff
+images: 🎰
 ---
 
 I wrote a royal flush simulator in OCaml just to not forget the language.

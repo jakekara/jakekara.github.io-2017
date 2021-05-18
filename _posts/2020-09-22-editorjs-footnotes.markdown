@@ -3,6 +3,7 @@ layout: post
 title: editor.js footnote plugin
 date: "2020-09-22 16:45:00 -0400"
 categories: js
+emoji: 🦶
 ---
 
 I wrote a plugin for editor.js to support footnotes.

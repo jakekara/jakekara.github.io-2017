@@ -4,6 +4,7 @@ title: archives-space-scraper
 description: "Open source command line tool for making local copies of ArchivesSpace repositories"
 date: '2020-04-17 12:00:00 -0500'
 categories: python
+emoji: 🗄
 ---
 
 I wrote a tool for making local copies of ArchivesSpace repositories.

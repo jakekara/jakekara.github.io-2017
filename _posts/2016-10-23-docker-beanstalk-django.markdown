@@ -3,6 +3,7 @@ layout: post
 title:  "Deploying Django news apps on AWS"
 date:   2016-10-23 12:00:00 -0400
 categories: docker
+emoji: 🗞
 ---
 
 $ docker run -p 8080:80 jkara/occupation:latest

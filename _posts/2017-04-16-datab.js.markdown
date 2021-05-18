@@ -3,6 +3,7 @@ layout: post
 title:  "datab.js, tabular data with js"
 date:   2017-04-16 10:00:30 -0500
 categories: javascript
+emoji: 🗂
 ---
 
 I wrote a js library for transforming tabular data in javascript, and
