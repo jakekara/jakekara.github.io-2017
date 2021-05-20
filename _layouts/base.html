@@ -38,9 +38,13 @@
 
   <body>
     <header id="masthead">
-      <a href="/">
-        <h6 id="site-title">{{site.title}}</h6>
-      </a>
+      <div class="masthead-top">
+        <div id="site-title">
+          <a href="/">{{site.title | downcase }}</a> ‣ {% if page.title %} {{
+          page.title }} {% endif %}
+        </div>
+      </div>
+      <div class="bottom-skew pink"></div>
     </header>
     <main class="container">{{ content }}</main>
   </body>

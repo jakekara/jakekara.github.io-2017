@@ -19,11 +19,13 @@ html {
   color: #222;
 }
 a {
-  color: rgb(209, 47, 161);
+  background-color: rgb(209, 47, 161);
+  color: white;
 }
 a:hover {
   /* color: gray; */
-  color: rgb(115, 65, 131);
+  background-color: rgb(115, 65, 131);
+  color: white;
 }
 .post-meta {
   color: #02883f;
@@ -62,6 +64,7 @@ a:hover {
 
 body {
   line-height: 1.4;
+  margin: 0px;
 }
 
 h1 {
@@ -89,6 +92,11 @@ h7 {
   font-weight: normal;
   line-height: 1em;
   margin: 0px;
+  height: 2em;
+  color: #7ee9ae;
+
+  display: flex;
+  align-items: center;
 }
 
 /* a:hover{
@@ -100,12 +108,59 @@ h7 {
 } */
 
 #masthead {
-  max-width: 600pt;
+  /* max-width: 600pt;
   margin-left: auto;
-  margin-right: auto;
-  display: flex;
+  margin-right: auto; */
+  /* display: flex; */
   /* justify-content: flex-end; */
-  padding: 10px 0px;
+  /* padding: 10px 0px; */
+
+  /* padding: 9px 14px; */
+  /* background-color: black; rgb(209, 47, 161); */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+  font-size: 14px;
+  margin-bottom: 54px;
+
+  line-height: 1em;
+
+  max-width: 100%;
+  overflow-x: hidden;
+
+  /* box-shadow: 14px 10px 0px #7ee9ae; */
+}
+
+#masthead .bottom-skew {
+  height: 10px;
+  transform: skew(45deg) translateX(14px);
+}
+
+#masthead .bottom-skew.white {
+  background-color: white;
+  transform: skew(45deg) translateX(34px);
+}
+
+#masthead .bottom-skew.green {
+  background-color: #7ee9ae;
+  transform: skew(45deg) translateX(24px);
+}
+
+#masthead .bottom-skew.pink {
+  background-color: rgb(211, 121, 238);
+}
+
+#masthead .masthead-top {
+  background-color: black;
+}
+
+#masthead #site-title a {
+  /* padding: 14px; */
+  padding: 4px;
+  margin: 0px;
+  background-color: unset;
+  color: white;
 }
 
 .container {
@@ -120,6 +175,7 @@ p {
 
 .post-meta {
   font-size: 1em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 
   /* text-align: right; */
 }
@@ -166,4 +222,9 @@ ul.post-list li {
 ul.post-list li:hover {
   transition: border-color 0.5s ease;
   border-color: #7ee9ae;
+}
+
+.portfolio-project h2.project-title {
+  font-size: 22px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
