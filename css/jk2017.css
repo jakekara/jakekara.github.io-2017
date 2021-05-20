@@ -42,8 +42,7 @@ a:hover {
     color: #bbb;
   }
 
-  .post-list a .post-link,
-  a {
+  .post-list a .post-link {
     color: #7ee9ae;
   }
 
