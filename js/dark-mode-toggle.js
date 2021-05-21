@@ -44,4 +44,8 @@ window.onload = function () {
 
   setDarkMode(systemIsInDarkMode());
   toggleButton.onclick = toggleDarkMode;
+
+  setTimeout(function () {
+    document.body.style.transition = "background-color 0.7s";
+  }, 1000);
 };
