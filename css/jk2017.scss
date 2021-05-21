@@ -1,3 +1,6 @@
+---
+---
+
 @import url("fonts.css");
 @import url("syntax.css");
 
@@ -11,7 +14,7 @@ a {
 }
 
 /* Default color scheme */
-html {
+body {
   /* background-color: #fffff8; */
   /* color: #122b17; */
 
@@ -38,8 +41,8 @@ a:hover {
 }
 
 /* Support dark and light mode */
-@media (prefers-color-scheme: dark) {
-  html {
+[data-darkmode="true"] {
+  body {
     background-color: #222;
     color: #bbb;
   }
@@ -60,13 +63,6 @@ a:hover {
     background-color: rgb(136, 17, 100);
   }
 }
-
-/* @media (prefers-color-scheme: light) {
-  html {
-    background-color: #fffff8;
-    color: #122b17;
-  }
-} */
 
 body {
   line-height: 1.4;
@@ -103,6 +99,8 @@ h7 {
 
   display: flex;
   align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* a:hover{
@@ -136,6 +134,23 @@ h7 {
   overflow-x: hidden;
 
   /* box-shadow: 14px 10px 0px #7ee9ae; */
+}
+
+.masthead-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+button#dark-mode-toggle {
+  cursor: pointer;
+  background-color: transparent;
+  height: 100%;
+  border: none;
+  font-size: 15px;
+}
+
+button#dark-mode-toggle:hover {
+  background-color: #555;
 }
 
 #masthead .bottom-skew {
