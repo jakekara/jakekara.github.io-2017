@@ -1,4 +1,5 @@
 @import url("fonts.css");
+@import url("syntax.css");
 
 html {
   font-family: "et-book", Palatino, "Palatino Linotype", "Palatino LT STD",
@@ -19,8 +20,9 @@ html {
   color: #222;
 }
 a {
-  background-color: rgb(209, 47, 161);
-  color: white;
+  background-color: rgb(241, 195, 227);
+  /* background-color: rgb(83, 19, 64); */
+  color: inherit;
 }
 a:hover {
   /* color: gray; */
@@ -49,8 +51,13 @@ a:hover {
   .post-meta {
     color: rgb(193, 144, 207);
   }
+
+  a {
+    background-color: rgb(83, 19, 64);
+    color: white;
+  }
   a:hover {
-    color: rgb(211, 121, 238);
+    background-color: rgb(136, 17, 100);
   }
 }
 
@@ -192,10 +199,6 @@ code {
   display: inline-block;
   max-width: 100%;
   overflow-x: scroll;
-}
-
-pre code {
-  padding-left: 22px;
 }
 
 .clear-both {
