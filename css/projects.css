@@ -1,0 +1,34 @@
+ul.project-list {
+  padding: 0;
+}
+
+li.project-list-item {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 40px;
+}
+
+.project {
+  border: 3px solid transparent;
+  padding: 12px;
+}
+
+.project-link:hover .project {
+  border-color: #7ee9ae;
+}
+
+picture.project-preview img {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a.project-link:hover {
+  color: unset;
+}
+
+.project h2.project-title {
+  font-size: 22px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}

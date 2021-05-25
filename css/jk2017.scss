@@ -3,6 +3,7 @@
 
 @import url("fonts.css");
 @import url("syntax.css");
+@import url("projects.css");
 
 html {
   font-family: "et-book", Palatino, "Palatino Linotype", "Palatino LT STD",
@@ -240,9 +241,4 @@ ul.post-list li {
 ul.post-list li:hover {
   transition: border-color 0.5s ease;
   border-color: #7ee9ae;
-}
-
-.portfolio-project h2.project-title {
-  font-size: 22px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
