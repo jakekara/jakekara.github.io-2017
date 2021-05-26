@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: "BlakeTint"
 description: "Comparing William Blake's use of color across editions of prints"
 tags: 

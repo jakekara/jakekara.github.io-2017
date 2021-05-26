@@ -1,0 +1,15 @@
+---
+layout: "base"
+---
+
+<h1>Index of {{page.url | relative_url}}</h1>
+<ul class="archive-posts">
+  {% for post in page.posts %}
+  <li class="archive-post">
+    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <a class="post-link" href="{{ post.url | relative_url }}"
+      >{{ post.title }}</a
+    >
+  </li>
+  {% endfor %}
+</ul>

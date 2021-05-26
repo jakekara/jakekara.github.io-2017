@@ -1,11 +1,17 @@
 ---
-layout: base
+layout: wide-base
 ---
 
-<article>
-  <header>
-    <h1>{{page.title}}</h1>
-    <p>{{page.description}}</p>
-  </header>
-  {{content}}
-</article>
+<main class="project-main">
+  <header
+    class="project-header"
+    style="background:url('/assets/images/jpg/{{page.image}}-2000.jpg')"
+  ></header>
+  <article class="container">
+    <div class="header-content">
+      <h1>{{page.title}}</h1>
+      <p>{{page.description}}</p>
+    </div>
+    {{page.description}}{{content}}
+  </article>
+</main>

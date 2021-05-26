@@ -34,7 +34,7 @@ plugins:
 
 jekyll-archives:
   enabled: all
-  layout: index
+  layout: archive
   permalinks:
     year: '/:year/'
     month: '/:year/:month/'
@@ -43,5 +43,17 @@ jekyll-archives:
     category: '/category/:name/'
 
 collections:
+  posts:
+    output: true
   projects:
     output: true
+  blog:
+    sort_by: date
+    output: true
+    permalink: /:collection/:year/:month/:day/:title
+    
+    
+permalink: /:categories/:year/:month/:day/:title
+
+# This is what I'd like to do but I don't want to break links
+# permalink: /:collection/:year/:month/:day/:title

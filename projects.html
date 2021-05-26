@@ -1,7 +1,7 @@
 ---
 layout: base
 title: Projects
-description: Software projects I've built for work and for myself
+description: Software projects I built, both for work and for myself.
 permalink: /projects/
 ---
 
@@ -34,6 +34,11 @@ permalink: /projects/
         <div class="text-content">
           <h2 class="project-title">{{ project.title }}</h2>
           <!-- <p>{{ project.description }}</p> -->
+          <div class="tag-pill-box">
+            {% for tag in project.tags %}
+            <div class="tag-pill">{{tag}}</div>
+            {% endfor %}
+          </div>
         </div>
       </article>
     </a>

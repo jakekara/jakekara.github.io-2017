@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: "Visual Search"
 description: "Visual search tool for the Fortunoff Video Archive for Holocaust Testimonies at Yale University"
 tags: 
