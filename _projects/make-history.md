@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "'Help us Make History' Yale Library project site"
+title: "'Make History' project site"
 description: "Custom site built on Yale's enterprise Drupal CMS"
 tags: 
     - Drupal
@@ -9,3 +9,13 @@ tags:
 image: MakeHistory
 link: https://makehistory.library.yale.edu/
 ---
+
+The ['Help us Make History' project site](https://makehistory.library.yale.edu)
+was built on Yale's enterprise Drupal instance, with significant customization
+to implement designs by my colleague Monica Ong Reed.
+
+{% include imgset.html slug="MakeHistory" alt="The 'Make History' project site" %}  
+
+## Links  
+
+* 'Help us Make History' project site - [https://makehistory.library.yale.edu](https://makehistory.library.yale.edu)  

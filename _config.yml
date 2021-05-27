@@ -41,6 +41,8 @@ jekyll-archives:
     day: '/:year/:month/:day/'
     tag: '/tag/:name/'
     category: '/category/:name/'
+    collection: ':collection/'
+    collectionYear: ':collection/:year'
 
 collections:
   posts:

@@ -1,0 +1,17 @@
+{% assign sizes = "300, 600, 1000, 2000, 3000, 4000" | split: ", " %}
+<!---->
+{% assign formats = "jpg, webp, avif" | split: ", " | reverse %}
+<picture {% if include.class %} class="{{include.pictureClass}}" {%endif%}>
+  {% for size in sizes %} {% for format in formats %}
+  <source
+    media="(max-width: {{size}}px)"
+    srcset="/assets/images/{{format}}/{{include.slug}}-{{size}}.{{format}} {{size}}w"
+    type="image/{{format}}"
+  />
+  {% endfor %} {% endfor %}
+  <img
+    src="/assets/images/jpg/{{include.slug}}-1000.jpg"
+    alt="{{ include.alt }}"
+    title="{{ include.title | default: include.alt }}"
+  />
+</picture>

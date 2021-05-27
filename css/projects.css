@@ -1,10 +1,21 @@
 .project-header {
-  padding-top: 300px;
+  /* padding-top: 300px; */
   background-position: center !important;
   background-size: cover !important;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 50vh;
 }
 
 .header-content {
+}
+
+.project-main {
+  margin-top: auto;
 }
 
 ul.project-list {
@@ -27,6 +38,9 @@ li.project-list-item {
   border-color: #7ee9ae;
 }
 
+img {
+  max-width: 100%;
+}
 picture.project-preview img {
   max-width: 100%;
   overflow-x: hidden;

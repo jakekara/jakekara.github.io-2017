@@ -5,7 +5,8 @@ description: Jake Kara's personal website
 ---
 {% include base.html %}
 <ul class="post-list">
-  {% for post in site.posts %}
+  {% assign sorted = site.blog | reverse %}
+  {% for post in sorted %}
   <a aria-label="{{ post.title }} " href="{{ post.url | relative_url }}">
   <li class="col-xs-12 story-preview">
     

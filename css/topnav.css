@@ -1,0 +1,23 @@
+.top-nav-list {
+  list-style-type: none;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.top-nav-list li {
+  padding: 2px;
+  margin: 2px;
+}
+
+.nav-link {
+  padding: 9px 18px;
+  border-radius: 3px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: lowercase;
+}
+
+.nav-link:hover {
+  box-shadow: 4px 4px 0px black;
+}

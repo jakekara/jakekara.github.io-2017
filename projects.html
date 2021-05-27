@@ -5,31 +5,18 @@ description: Software projects I built, both for work and for myself.
 permalink: /projects/
 ---
 
-{% assign sizes = "300, 600, 1000, 2000, 3000, 4000" | split: ", " %}
-<!-- -->
-{% assign formats = "jpg, webp, avif" | split: ", " | reverse %}
-
 <ul class="project-list">
   {% for project in site.projects %}
   <li class="project-list-item">
-    <a class="project-link" href="{{ project.link }}">
+    <a class="project-link" href="{{ project.url | relative_url }}">
       <article class="project">
         {% if project.image %}
-        <picture class="project-preview">
-          {% for size in sizes %} {% for format in formats %}
-          <source
-            media="(max-width: {{size}}px)"
-            srcset="/assets/images/{{format}}/{{project.image}}-{{size}}.{{format}} {{size}}w"
-            type="image/{{format}}"
-          />
-          {% endfor %} {% endfor %}
-          <!-- -->
-          {% assign defaultAlt = 'Screenshot of ' | append : project.title %}
-          <img
-            src="/assets/images/jpg/{{project.image}}-1000.jpg"
-            alt="{{project.alt | default:  defaultAlt }}"
-          /> </picture
-        >{% endif %}
+        <!-- -->
+        {% assign defaultAlt = 'Screenshot of ' | append : project.title %}
+        <!-- -->
+        {% assign alt = project.alt | default: defaultAlt %}
+        <!-- -->
+        {% include imgset.html slug=project.image alt=alt %} {% endif %}
 
         <div class="text-content">
           <h2 class="project-title">{{ project.title }}</h2>

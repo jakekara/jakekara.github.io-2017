@@ -1,0 +1,24 @@
+---
+layout: base
+title: blog root
+description: Jake Kara's personal website
+---
+{% include base.html %}
+<ul class="post-list">
+  {% for post in site.posts %}
+  <a aria-label="{{ post.title }} " href="{{ post.url | relative_url }}">
+  <li class="col-xs-12 story-preview">
+    
+      <article>
+        <header>
+          <p class="col-xs-7 col-sm-2 post-meta">
+            <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+          </p>
+          <p class="post-link meta" href="{{ post.url | relative_url }}">
+              {{ post.emoji | default: "📝" }} {{ post.excerpt | strip_html}}</p>
+        </header>
+      </article>
+  </li>
+</a>
+  {% endfor %}
+</ul>
