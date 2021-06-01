@@ -10,9 +10,11 @@ tags:
 link: https://github.com/margo-notebooks/modular-notebook-tutorial
 ---
 
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/6EgsAb56jY0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 For my master's thesis in Software Engineering from Harvard Extension School, I
 developed a suite of software for enhancing Jupyter Notebooks to be used as
-Python modules, and in other unintended contexts. 
+Python modules, and in other unintended contexts.  
 
 [Margo Loader](https://github.com/margo-notebooks/margo-loader-py) extends Python's `import` statement so you can import Jupyter Notebooks as if they were `.py` files.
 
@@ -71,4 +73,7 @@ def test_say_hello():
 * Margo Editor GitHub repo - [https://github.com/margo-notebooks/margo-editor-ts](https://github.com/margo-notebooks/margo-editor-ts)
 * Color Extraction Methodology repo - [https://github.com/jakekara/color-extraction-methodology/](https://github.com/jakekara/color-extraction-methodology/)
 * Color Extraction Methodology live demo - [https://mybinder.org/v2/zenodo/10.5281/zenodo.4554402/](https://mybinder.org/v2/zenodo/10.5281/zenodo.4554402/)
-* TODO - I'll link to my thesis once it is indexed by ProQuest.
+* Thesis on Harvard DASH - [https://nrs.harvard.edu/URN-3:HUL.INSTREPOS:37367613](https://nrs.harvard.edu/URN-3:HUL.INSTREPOS:37367613)
+* Thesis on ProQUest - TBD when it is indexed.
+* Video tutorial on using Jupyter Notebooks as Python modules - [https://youtu.be/6EgsAb56jY0](https://youtu.be/6EgsAb56jY0)
+
