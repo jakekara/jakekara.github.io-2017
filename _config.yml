@@ -56,6 +56,7 @@ collections:
     
     
 permalink: /:categories/:year/:month/:day/:title
+post_dirs: true
 
 # This is what I'd like to do but I don't want to break links
 # permalink: /:collection/:year/:month/:day/:title
