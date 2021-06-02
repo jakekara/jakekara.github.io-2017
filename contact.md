@@ -4,4 +4,4 @@ title: "contact"
 permalink: /contact/
 ---
 
-*email*: [jake@jakekara.com](mailto:jake@jakekara.com)
+*email*: [hey@jakekara.com](mailto:hey@jakekara.com)
