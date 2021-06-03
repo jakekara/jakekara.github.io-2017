@@ -5,16 +5,12 @@
     <meta charset="utf-8" />
     <title>{{page.title}} # Jake Kara, software engineer</title>
 
-    <meta
-      property="og:title"
-      content="{{page.description | default: page.title}}"
-    />
+    <meta property="og:title" content="{{default: page.title}}" />
     <meta property="og:type" content="{{page.ogtype | default: 'website'}}" />
     <meta property="og:url" content="{{page.url | absolute_url }}" />
-    <meta
-      property="og:image"
-      content="/assets/images/jpg/{{page.image}}-2000.jpg"
-    />
+    {% if page.image %}
+    <meta property="og:image" content="/assets/images/og/{{page.image}}.jpg" />
+    {% endif %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
