@@ -6,12 +6,36 @@
     <title>{{page.title}} # {{site.title}}</title>
 
     <!-- Twitter Metadata -->
+    <meta property="twitter:site" content="@jakekara" />
+    <meta property="twitter:creator" content="@jakekara" />
+
     {% if page.twitterImage %}
+    <meta property="twitter:card" content="summary_image_large" />
     <meta property="twitter:image" content="{{page.twitterImage}}" />
+    {% else %}
+    <meta property="twitter:card" content="summary" />
     {% endif %}
 
-    <!-- opengraph metadata -->
+    <!-- opengraph and common metadata -->
     <meta property="og:title" content="{{page.title}} # {{ site.title }}" />
+    <meta
+      property="twitter:title"
+      content="{{page.title}} # {{ site.title }}"
+    />
+
+    <meta
+      name="description"
+      content="{{ page.description | default: page.excerpt | strip_html }}"
+    />
+    <meta
+      name="og:description"
+      content="{{ page.description | default: page.excerpt | strip_html }}"
+    />
+    <meta
+      name="twitter:description"
+      content="{{ page.description | default: page.excerpt | strip_html }}"
+    />
+
     <meta property="og:type" content="{{page.ogtype | default: 'website'}}" />
     <meta property="og:url" content="{{page.url | absolute_url }}" />
     {% if page.image %}
@@ -19,10 +43,6 @@
     {% endif %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="{{ page.description | default: page.excerpt | strip_html }}"
-    />
     <link rel="stylesheet" href="{{site.root}}/css/jk2017.css" media="all" />
     <link
       rel="icon"
