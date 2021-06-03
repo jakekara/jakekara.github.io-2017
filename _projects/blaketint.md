@@ -8,6 +8,7 @@ tags:
     - Typescript
 image: BlakeTint
 link: https://dhlab.yale.edu/projects/blaketint/
+twitterImage: /assets/images/square/BlakeTint-1200.png
 ---
 
 BlakeTint is a

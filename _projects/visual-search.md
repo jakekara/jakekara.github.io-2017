@@ -9,6 +9,7 @@ tags:
 image: VisualSearch
 layout: project
 link: https://dhlab.yale.edu/projects/visual-search/
+twitterImage: /assets/images/square/VisualSearch-1200.png
 ---
 
 The [Visual Search](https://yale-fortunoff.github,.io/metadash) is a project for the [Fortunoff Video Archive For Holocaust Testimonies](https://fortunoff.library.yale.edu/) that visualizes the collection's metadata. I was the primary developer on this app.

@@ -9,6 +9,8 @@ tags:
     - FVAHT
 image: CitationDatabase
 link: https://dhlab.yale.edu/projects/citation-database/
+twitterImage: /assets/images/square/CitationDatabase-1200.png
+
 ---
 
 The [Citation Database](https://yale-fortunoff.github.io/citationdb/) is

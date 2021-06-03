@@ -7,6 +7,8 @@ tags:
     - React
 image: CriticalEditions
 link: https://editions.fortunoff.library.yale.edu/
+twitterImage: /assets/images/square/CriticalEditions-1200.png
+
 ---
 
 The [Critial Editions](https://editions.fortunoff.library.yale.edu/) project for

@@ -8,6 +8,7 @@ tags:
     - Python
     - Jupyter
 link: https://github.com/margo-notebooks/modular-notebook-tutorial
+twitterImage: /assets/images/square/Margo-1200.png
 ---
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/6EgsAb56jY0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

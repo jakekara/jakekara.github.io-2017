@@ -8,6 +8,7 @@ tags:
     - CSS
 image: MakeHistory
 link: https://makehistory.library.yale.edu/
+twitterImage: /assets/images/square/MakeHistory-1200.png
 ---
 
 The ['Help us Make History' project site](https://makehistory.library.yale.edu)
