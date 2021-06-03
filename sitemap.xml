@@ -17,7 +17,6 @@ layout: null
     {% for project in site.projects %}
     <url>
         <loc>{{ project.url | absolute_url }}</loc>
-        <lastmod>{{ project.date | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     {% endfor %}
