@@ -34,7 +34,7 @@ restructuring data to answer your research questions. Some examples include:
 * Building databases or flat-file structured data
 * Interrogating data with reproducible, documented computational methodology
 
-## About me
+## 👋 About me
 
 * I work at Yale's Digital Humanities Lab, and before that I was a data journalist.
 * I only take on projects that allows me to follow the ethics that govern
