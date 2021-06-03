@@ -60,3 +60,11 @@ post_dirs: true
 
 # This is what I'd like to do but I don't want to break links
 # permalink: /:collection/:year/:month/:day/:title
+
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts

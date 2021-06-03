@@ -51,7 +51,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#7ee9ae" />
     <meta name="author" content="Jake Kara" />
 
-    <link href="{{page.url}}" rel="canonical" />
+    {% if page.is_post %}
+    <link
+      rel="canonical"
+      href="/blog/{{page.date | date: '%Y/%m/%d'}}/{{page.slug}}"
+    />
+    {% else %}
+    <link rel="canonical" href="{{page.url}}" />
+    {% endif %}
   </head>
 
   <body>
