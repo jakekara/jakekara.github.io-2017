@@ -43,26 +43,28 @@ a:hover {
 }
 
 /* Support dark and light mode */
-[data-darkmode="true"] {
-  body {
-    background-color: #222;
-    color: #bbb;
-  }
+@media screen {
+  [data-darkmode="true"] {
+    body {
+      background-color: #222;
+      color: #bbb;
+    }
 
-  .post-list a .post-link {
-    color: #7ee9ae;
-  }
+    .post-list a .post-link {
+      color: #7ee9ae;
+    }
 
-  .post-meta {
-    color: rgb(193, 144, 207);
-  }
+    .post-meta {
+      color: rgb(193, 144, 207);
+    }
 
-  a {
-    background-color: rgb(83, 19, 64);
-    color: white;
-  }
-  a:hover {
-    background-color: rgb(136, 17, 100);
+    a {
+      background-color: rgb(83, 19, 64);
+      color: white;
+    }
+    a:hover {
+      background-color: rgb(136, 17, 100);
+    }
   }
 }
 
@@ -242,4 +244,14 @@ ul.post-list li {
 ul.post-list li:hover {
   transition: border-color 0.5s ease;
   border-color: #7ee9ae;
+}
+
+@media print {
+  .no-print {
+    visibility: hidden;
+  }
+
+  h2 {
+    page-break-after: avoid;
+  }
 }
