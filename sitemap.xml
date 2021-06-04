@@ -23,7 +23,6 @@ layout: null
     {% for blog in site.blog %}
     <url>
         <loc>{{ blog.url | absolute_url }}</loc>
-        <lastmod>{{ blog.date | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>yearly</changefreq>
     </url>
     {% endfor %}
