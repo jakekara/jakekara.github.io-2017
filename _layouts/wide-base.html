@@ -9,12 +9,12 @@
     <meta property="twitter:site" content="@jakekara" />
     <meta property="twitter:creator" content="@jakekara" />
 
-    {% if page.twitterImage %}
+    <!-- {% if page.twitterImage %}
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:image" content="{{page.twitterImage}}" />
     {% else %}
     <meta property="twitter:card" content="summary" />
-    {% endif %}
+    {% endif %} -->
 
     <!-- opengraph and common metadata -->
     <meta property="og:title" content="{{page.title}} # {{ site.title }}" />
@@ -40,6 +40,16 @@
     <meta property="og:url" content="{{page.url | absolute_url }}" />
     {% if page.image %}
     <meta property="og:image" content="/assets/images/og/{{page.image}}.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:image"
+      content="/assets/images/og/{{page.image}}.jpg"
+    />
+    {% else %}
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="{{site.socialImage}}" />
+    <meta property="og:image" content="{{site.socialImage}}" />
+
     {% endif %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
