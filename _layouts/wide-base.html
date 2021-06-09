@@ -4,52 +4,32 @@
   <head>
     <meta charset="utf-8" />
     <title>{{page.title}} # {{site.title}}</title>
+    <meta name="description" content="{{description}}" />
+
+    {% assign description=page.description | default: page.excerpt | strip_html
+    %}
 
     <!-- Twitter Metadata -->
-    <meta property="twitter:site" content="@jakekara" />
-    <meta property="twitter:creator" content="@jakekara" />
+    <meta name="twitter:site" content="@jakekara" />
+    <meta name="twitter:creator" content="@jakekara" />
+    <meta name="twitter:title" content="{{page.title}}" />
+    <meta name="twitter:description" content="{{description}}" />
 
-    <!-- {% if page.twitterImage %}
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image" content="{{page.twitterImage}}" />
-    {% else %}
-    <meta property="twitter:card" content="summary" />
-    {% endif %} -->
+    <!-- opengraph metadata -->
+    <meta property="og:title" content="{{page.title}}" />
 
-    <!-- opengraph and common metadata -->
-    <meta property="og:title" content="{{page.title}} # {{ site.title }}" />
-    <meta
-      property="twitter:title"
-      content="{{page.title}} # {{ site.title }}"
-    />
-
-    <meta
-      name="description"
-      content="{{ page.description | default: page.excerpt | strip_html }}"
-    />
-    <meta
-      name="og:description"
-      content="{{ page.description | default: page.excerpt | strip_html }}"
-    />
-    <meta
-      name="twitter:description"
-      content="{{ page.description | default: page.excerpt | strip_html }}"
-    />
-
+    <meta property="og:description" content="{{description}}" />
     <meta property="og:type" content="{{page.ogtype | default: 'website'}}" />
     <meta property="og:url" content="{{page.url | absolute_url }}" />
+
     {% if page.image %}
     <meta property="og:image" content="/assets/images/og/{{page.image}}.jpg" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:image"
-      content="/assets/images/og/{{page.image}}.jpg"
-    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/assets/images/og/{{page.image}}.jpg" />
     {% else %}
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image" content="{{site.socialImage}}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="{{site.twitterImage}}" />
     <meta property="og:image" content="{{site.socialImage}}" />
-
     {% endif %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
