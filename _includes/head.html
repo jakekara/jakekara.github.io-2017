@@ -1,5 +1,5 @@
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <!-- setting page description -->
   {% assign description=page.description | default: page.excerpt | strip_html %}
 
@@ -24,63 +24,63 @@
 
   <!-- high-level meta stuff -->
   <title>{{page.title}} # {{site.title}}</title>
-  <meta name="description" content="{{description}}" />
-  <meta name="author" content="Jake Kara" />
+  <meta name="description" content="{{description}}">
+  <meta name="author" content="Jake Kara">
 
   <!-- links section -->
-  <link rel="stylesheet" href="{{site.root}}/css/jk2017.css" media="all" />
+  <link rel="stylesheet" href="{{site.root}}/css/jk2017.css" media="all">
   <link
     rel="icon"
     href="/favicon.ico"
     sizes="16x16 32x32 48x48"
     type="image/x-icon"
-  />
-  <link rel="icon" href="/favicon-152.png" sizes="152x152" type="image/png" />
-  <link rel="icon" href="/favicon-167.png" sizes="167x167" type="image/png" />
-  <link rel="icon" href="/favicon-180.png" sizes="180x180" type="image/png" />
-  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+ >
+  <link rel="icon" href="/favicon-152.png" sizes="152x152" type="image/png">
+  <link rel="icon" href="/favicon-167.png" sizes="167x167" type="image/png">
+  <link rel="icon" href="/favicon-180.png" sizes="180x180" type="image/png">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
   <link
     rel="icon"
     href="/favicon-1200.png"
     sizes="1200x1200"
     type="image/png"
-  />
+ >
 
-  <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
-  <link rel="apple-touch-icon" sizes="167x167" href="/favicon-167.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/favicon-167.png">
 
   {% if page.is_post %}
   <link
     rel="canonical"
     href="/blog/{{page.date | date: '%Y/%m/%d'}}/{{page.slug}}"
-  />
+ >
   {% else %}
-  <link rel="canonical" href="{{page.url}}" />
+  <link rel="canonical" href="{{page.url}}">
   {% endif %}
 
   <!-- Twitter Metadata -->
-  <meta name="twitter:card" content="{{twitterCard}}" />
-  <meta name="twitter:site" content="@jakekara" />
-  <meta name="twitter:creator" content="@jakekara" />
-  <meta name="twitter:title" content="{{page.title}}" />
-  <meta name="twitter:description" content="{{description}}" />
-  <meta name="twitter:image" content="{{twitterImage}}" />
+  <meta name="twitter:card" content="{{twitterCard}}">
+  <meta name="twitter:site" content="@jakekara">
+  <meta name="twitter:creator" content="@jakekara">
+  <meta name="twitter:title" content="{{page.title}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:image" content="{{twitterImage}}">
 
   <!-- opengraph metadata -->
-  <meta property="og:title" content="{{page.title}}" />
-  <meta property="og:description" content="{{description}}" />
-  <meta property="og:type" content="{{page.ogtype | default: 'website'}}" />
-  <meta property="og:url" content="{{page.url | absolute_url }}" />
-  <meta property="og:image" content="{{socialImage}}" />
+  <meta property="og:title" content="{{page.title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:type" content="{{page.ogtype | default: 'website'}}">
+  <meta property="og:url" content="{{page.url | absolute_url }}">
+  <meta property="og:image" content="{{socialImage}}">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <script src="/js/dark-mode-toggle.js" async></script>
 
   <!-- mobile theming meta info -->
-  <meta name="color-scheme" content="dark light" />
-  <meta name="theme-color" content="#7ee9ae" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="#7ee9ae" />
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#7ee9ae">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#7ee9ae">
 </head>
