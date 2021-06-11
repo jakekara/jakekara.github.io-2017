@@ -6,17 +6,17 @@
   <!-- Initializing metadata -->
   {% if page.image %}
   <!-- using large social image for opengraph -->
-  {% assign socialImage = "/assets/images/og/" | append: page.image | append: ".jpg" %}
+  {% assign socialImage = "/assets/images/og/" | append: page.image | append: ".jpg" | absolute_url %}
   <!-- using large social image for twitter -->
-  {% assign twitterImage = socialImage %}
+  {% assign twitterImage = socialImage | absolute_url %}
   <!-- using summary_large_image twitter card type -->
   {% assign twitterCard = "summary_large_image" %}
   <!-- finish initializing social image variables -->
   {% else %}
   <!-- using generic social image for open graph -->
-  {% assign socialImage = site.socialImage %}
+  {% assign socialImage = site.socialImage | absolute_url %}
   <!-- using generic social image for twitter card -->
-  {% assign twitterImage = site.twitterImage %}
+  {% assign twitterImage = site.twitterImage | absolute_url %}
   <!-- using standard summary format for twitter card -->
   {% assign twitterCard = "summary" %}
   <!-- finish initializing social image variables -->
