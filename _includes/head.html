@@ -6,7 +6,7 @@
   <!-- Initializing metadata -->
   {% if page.image %}
   <!-- using large social image for opengraph -->
-  {% assign socialImage = "/assets/images/og/{{page.image}}.jpg" %}
+  {% assign socialImage = "/assets/images/og/" | append: page.image | append: ".jpg" %}
   <!-- using large social image for twitter -->
   {% assign twitterImage = socialImage %}
   <!-- using summary_large_image twitter card type -->
