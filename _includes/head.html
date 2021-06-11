@@ -60,19 +60,19 @@
   {% endif %}
 
   <!-- Twitter Metadata -->
-  <meta name="twitter:card" content="{{twitterCard}}">
-  <meta name="twitter:site" content="@jakekara">
-  <meta name="twitter:creator" content="@jakekara">
-  <meta name="twitter:title" content="{{page.title}}">
-  <meta name="twitter:description" content="{{description}}">
-  <meta name="twitter:image" content="{{twitterImage}}">
+  <meta property="twitter:card" name="twitter:card" content="{{twitterCard}}">
+  <meta property="twitter:site" name="twitter:site" content="@jakekara">
+  <meta property="twitter:creator" name="twitter:creator" content="@jakekara">
+  <meta property="twitter:title" name="twitter:title" content="{{page.title}}">
+  <meta property="twitter:description" name="twitter:description" content="{{description}}">
+  <meta property="twitter:image" name="twitter:image" content="{{twitterImage}}">
 
   <!-- opengraph metadata -->
-  <meta property="og:title" content="{{page.title}}">
-  <meta property="og:description" content="{{description}}">
-  <meta property="og:type" content="{{page.ogtype | default: 'website'}}">
-  <meta property="og:url" content="{{page.url | absolute_url }}">
-  <meta property="og:image" content="{{socialImage}}">
+  <meta name="og:title" property="og:title" content="{{page.title}}">
+  <meta name="og:description" property="og:description" content="{{description}}">
+  <meta name="og:type" property="og:type" content="{{page.ogtype | default: 'website'}}">
+  <meta name="og:url" property="og:url" content="{{page.url | absolute_url }}">
+  <meta name="og:image" property="og:image" content="{{socialImage}}">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
