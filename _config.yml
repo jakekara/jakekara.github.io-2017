@@ -22,7 +22,7 @@ description: > # this means to ignore newlines until "baseurl:"
 url: "https://jakekara.com" # the base hostname & protocol for your site
 baseurl: "/" # the subpath of your site, e.g. /blog
 twitter_username: jakekara
-github_username:  jakekara
+github_username: jakekara
 
 # Build settings
 markdown: kramdown
@@ -38,13 +38,13 @@ jekyll-archives:
   enabled: all
   layout: archive
   permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
-    collection: ':collection/'
-    collectionYear: ':collection/:year'
+    year: "/:year/"
+    month: "/:year/:month/"
+    day: "/:year/:month/:day/"
+    tag: "/tag/:name/"
+    category: "/category/:name/"
+    collection: ":collection/"
+    collectionYear: ":collection/:year"
 
 collections:
   posts:
@@ -55,8 +55,7 @@ collections:
     sort_by: date
     output: true
     permalink: /:collection/:year/:month/:day/:title
-    
-    
+
 permalink: /:categories/:year/:month/:day/:title
 post_dirs: true
 
@@ -64,9 +63,14 @@ post_dirs: true
 # permalink: /:collection/:year/:month/:day/:title
 
 defaults:
-  -
-    scope:
-      path: ""      # empty string for all files
-      type: posts   # limit to posts
+  - scope:
+      path: "" # empty string for all files
+      type: posts # limit to posts
     values:
       is_post: true # automatically set is_post=true for all posts
+      ogtype: "article"
+  - scope:
+      path: "" # empty string for all files
+      type: blog # limit to posts
+    values:
+      ogtype: "article"
